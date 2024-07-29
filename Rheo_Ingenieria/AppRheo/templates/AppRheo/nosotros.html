@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        {% load static %}
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>Business Casual - Start Bootstrap Theme</title>
+        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+        <!-- Google fonts-->
+        <link href="https://fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css?family=Lora:400,400i,700,700i" rel="stylesheet" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="{% static 'AppRheo/css/styles.css' %}" rel="stylesheet" />
+    </head>
+    <body>
+        <header>
+            <h1 class="site-heading text-center text-faded d-none d-lg-block">
+                <span class="site-heading-upper text-primary mb-3">INGENIERÍA QUE FLUYE</span>
+                <span class="site-heading-lower">RHÉO</span>
+            </h1>
+        </header>
+        <!-- Navigation-->
+        <nav class="navbar navbar-expand-lg navbar-dark py-lg-4" id="mainNav">
+            <div class="container">
+                <a class="navbar-brand text-uppercase fw-bold d-lg-none" href="index.html">Start Bootstrap</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mx-auto">
+                        <li class="nav-item px-lg-4"><a class="nav-link text-uppercase" href="{% url 'Inicio' %}">Inicio</a></li>
+                        <li class="nav-item px-lg-4"><a class="nav-link text-uppercase" href="{% url 'Nosotros' %}">Nosotros</a></li>
+                        <li class="nav-item px-lg-4"><a class="nav-link text-uppercase" href="{% url 'Servicios' %}">Servicios</a></li>
+                        <li class="nav-item px-lg-4"><a class="nav-link text-uppercase" href="{% url 'Contacto' %}">Contacto</a></li>
+                        <li class="nav-item px-lg-4"><a class="nav-link text-uppercase" href="{% url 'Experiencia' %}">Experiencia</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+
+        <section class="page-section about-heading">
+            <div class="container">
+                <div class="image-container">
+                    <img class="img-fluid rounded about-heading-img mb-3 mb-lg-0 smaller-image" src="{% static 'AppRheo/assets/img/about.jpg' %}" alt="..." />
+                </div>
+                <div class="about-heading-content">
+                    <div class="row">
+                        <div class="col-xl-9 col-lg-10 mx-auto">
+                            <div class="bg-faded rounded p-5">
+                                <h2 class="section-heading mb-4">
+                                    <span class="section-heading-upper">La Filosofía de RHÉO</span>
+                                    <span class="section-heading-lower">Excelencia en Cada Proyecto</span>
+                                </h2>
+                                <p>
+                                    En Rheo, entendemos que cada proyecto es único. Por eso, trabajamos en estrecha colaboración con nuestros clientes para entender sus necesidades y ofrecer soluciones personalizadas que fluyan con sus objetivos. <br><br>
+                                    Nuestro compromiso con la calidad, la eficiencia y la innovación asegura que cada proyecto se complete a tiempo, dentro del presupuesto y con los más altos estándares de calidad. <br><br>
+                                    Desde el diseño y la planificación hasta la supervisión y ejecución, en Rheo ofrecemos una gama completa de servicios para asegurar que cada proyecto fluya de manera eficiente y efectiva.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+<!-- Botón de desplazamiento hacia arriba -->
+<button id="scrollToTopBtn" class="scroll-to-top" onclick="scrollToTop()" style="position: fixed; bottom: 20px; right: 20px; background-color: #4e342e; color: white; border: none; border-radius: 50%; padding: 10px 15px; font-size: 24px; cursor: pointer; z-index: 1000; box-shadow: 0 2px 4px rgba(0,0,0,0.2);">▲</button>
+
+<!-- // Mostrar/ocultar el botón de desplazamiento hacia arriba-->
+<script>
+    window.onscroll = function() {
+        const scrollToTopBtn = document.getElementById("scrollToTopBtn");
+        if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+            scrollToTopBtn.style.display = "block";
+        } else {
+            scrollToTopBtn.style.display = "none";
+        }
+    };
+
+// Desplazar hacia arriba cuando se hace clic en el botón
+function scrollToTop() {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+</script>
+
+
+
+
+
+
+
+
+        <footer class="footer text-faded text-center py-5">
+            <div class="container"><p class="m-0 small">Copyright &copy; Rhéo Ingeniería Civil 2024</p></div>
+        </footer>
+        <!-- Bootstrap core JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Core theme JS-->
+        <script src="js/scripts.js"></script>
+    </body>
+</html>

@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <title>Business Casual - Start Bootstrap Theme</title>
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+    <!-- Google fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Lora:400,400i,700,700i" rel="stylesheet" />
+    <!-- Core theme CSS (includes Bootstrap)-->
+    <link href="{% static 'AppRheo/css/styles.css' %}" rel="stylesheet" />
+</head>
+<body>
+    <header>
+        <h1 class="site-heading text-center text-faded d-none d-lg-block">
+            <span class="site-heading-upper text-primary mb-3">INGENIERÍA QUE FLUYE</span>
+            <span class="site-heading-lower">RHÉO</span>
+        </h1>
+    </header>
+    <!-- Navigation-->
+    <nav class="navbar navbar-expand-lg navbar-dark py-lg-4" id="mainNav">
+        <div class="container">
+            <a class="navbar-brand text-uppercase fw-bold d-lg-none" href="index.html">Start Bootstrap</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item px-lg-4"><a class="nav-link text-uppercase" href="{% url 'Inicio' %}">Inicio</a></li>
+                    <li class="nav-item px-lg-4"><a class="nav-link text-uppercase" href="{% url 'Nosotros' %}">Nosotros</a></li>
+                    <li class="nav-item px-lg-4"><a class="nav-link text-uppercase" href="{% url 'Servicios' %}">Servicios</a></li>
+                    <li class="nav-item px-lg-4"><a class="nav-link text-uppercase" href="{% url 'Contacto' %}">Contacto</a></li>
+                    <li class="nav-item px-lg-4"><a class="nav-link text-uppercase" href="{% url 'Experiencia' %}">Experiencia</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    
+    <section class="page-section about-heading" style="margin-top: 100px;">
+        <div class="container">
+            <div class="about-heading-content">
+                <div class="row">
+                    <div class="col-xl-9 col-lg-10 mx-auto">
+                        <div class="bg-faded rounded p-5">
+                            <p>Desde el diseño y la planificación hasta la supervisión y ejecución, en Rheo ofrecemos una gama completa de servicios para asegurar que cada proyecto fluya de manera eficiente y efectiva.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="page-section">
+        <div class="container">
+            <div class="product-item">
+                <div class="product-item-title d-flex">
+                    <div class="bg-faded p-5 d-flex ms-auto rounded">
+                        <h2 class="section-heading mb-0">
+                            <span class="section-heading-upper">La ciencia detrás de la estabilidad y seguridad.</span>
+                            <span class="section-heading-lower">CÁLCULOS DE ESTRUCTURAS</span>
+                        </h2>
+                    </div>
+                </div>
+                <img class="product-item-img mx-auto d-flex rounded img-fluid mb-3 mb-lg-0" src="{% static 'AppRheo/assets/img/products-03.jpg' %}" alt="..." />
+                <div class="product-item-description d-flex me-auto">
+                    <div class="bg-faded p-5 rounded">
+                        <p class="mb-0">Nuestros cálculos de estructuras aseguran la integridad y seguridad de tus proyectos de construcción. Utilizamos metodología BIM (Building Information Modeling) para realizar análisis detallados que determinan la resistencia, estabilidad y durabilidad de los elementos estructurales. Este enfoque avanzado garantiza que cada diseño cumpla con los estándares de calidad y seguridad necesarios.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+    <section class="page-section">
+        <div class="container">
+            <div class="product-item">
+                <div class="product-item-title d-flex">
+                    <div class="bg-faded p-5 d-flex ms-auto rounded">
+                        <h2 class="section-heading mb-0">
+                            <span class="section-heading-upper">Especialistas en Suelos</span>
+                            <span class="section-heading-lower">ESTUDIOS GEOTÉCNICOS</span>
+                        </h2>
+                    </div>
+                </div>
+                <img class="product-item-img mx-auto d-flex rounded img-fluid mb-3 mb-lg-0" src="{% static 'AppRheo/assets/img/products-01.jpg' %}" alt="..." width="400" height="250" />
+
+                <div class="product-item-description d-flex me-auto">
+                    <div class="bg-faded p-5 rounded">
+                        <p class="mb-0">Nuestros estudios geotécnicos proporcionan un análisis detallado del suelo y subsuelo para garantizar la estabilidad y seguridad de tus proyectos de construcción. Evaluamos la capacidad de carga, la composición del suelo y las condiciones subterráneas, proporcionando datos críticos para un diseño y ejecución efectivos de estructuras.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    
+    
+    <section class="page-section">
+        <div class="container">
+            <div class="product-item">
+                <div class="product-item-title d-flex">
+                    <div class="bg-faded p-5 d-flex me-auto rounded">
+                        <h2 class="section-heading mb-0">
+                            <span class="section-heading-upper">La base de cada gran proyecto</span>
+                            <span class="section-heading-lower">RELEVAMIENTOS TOPOGRÁFICOS</span>
+                        </h2>
+                    </div>
+                </div>
+                <img class="product-item-img mx-auto d-flex rounded img-fluid mb-3 mb-lg-0" src="{% static 'AppRheo/assets/img/products-02.jpg' %}" alt="..." width="400" height="250" />
+                <div class="product-item-description d-flex ms-auto">
+                    <div class="bg-faded p-5 rounded">
+                        <p class="mb-0">Realizamos relevamientos topográficos precisos para mapear y analizar el terreno con detalle. Nuestros estudios proporcionan datos fundamentales sobre la elevación, la pendiente y las características del terreno, facilitando un diseño y planificación efectivos en tus proyectos de construcción y desarrollo.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+<!-- INICIO FORMULARIO-->
+<section class="page-section clearfix" id="formulario-seccion">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-xl-9 mx-auto">
+                <div class="text-center mb-5">
+                    <h1 style="color: #f5a623;">Consulta si brindamos el servicio que estás necesitando</h1>
+                </div>
+                <div class="bg-faded p-5 rounded";>
+                    <form method="post" id="busqueda-formulario" action="#formulario-seccion">
+                        {% csrf_token %}
+                        {{ miFormulario.as_p }}
+                        <div style="text-align: center;">
+                            <button type="submit" class="btn btn-primary mt-3" style="background-color: #4e342e; border-color: #4e342e;">Buscar</button>
+                        </div>
+                    </form>
+                </div>
+                <div class="bg-faded p-5 rounded p-5 shadow mt-5">
+                    <h1>Resultados de la Búsqueda</h1>
+                    {% if nombre_servicio %}
+                        <ul class="list-group mt-4">
+                            {% for servicio in nombre_servicio %}
+                                <li class="list-group-item">{{ servicio.nombre_servicio }}</li>
+                            {% endfor %}
+                        </ul>
+                    {% else %}
+                        <p class="mt-4">No se encontraron servicios.</p>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- FIN FORMULARIO-->
+
+
+
+
+
+<!-- JavaScript para el desplazamiento -->
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    if (window.location.hash && window.location.hash === "#formulario-seccion") {
+        const formularioSeccion = document.getElementById("formulario-seccion");
+        formularioSeccion.scrollIntoView({ behavior: 'smooth' });
+    }
+});
+</script>
+
+<!-- Botón de desplazamiento hacia arriba -->
+<button id="scrollToTopBtn" class="scroll-to-top" onclick="scrollToTop()" style="position: fixed; bottom: 20px; right: 20px; background-color: #4e342e; color: white; border: none; border-radius: 50%; padding: 10px 15px; font-size: 24px; cursor: pointer; z-index: 1000; box-shadow: 0 2px 4px rgba(0,0,0,0.2);">▲</button>
+
+<!-- // Mostrar/ocultar el botón de desplazamiento hacia arriba-->
+<script>
+    window.onscroll = function() {
+        const scrollToTopBtn = document.getElementById("scrollToTopBtn");
+        if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+            scrollToTopBtn.style.display = "block";
+        } else {
+            scrollToTopBtn.style.display = "none";
+        }
+    };
+
+// Desplazar hacia arriba cuando se hace clic en el botón
+function scrollToTop() {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+</script>
+
+
+
+
+    <footer class="footer text-faded text-center py-5">
+        <div class="container"><p class="m-0 small">Copyright &copy; Your Website 2023</p></div>
+    </footer>
+    <!-- Bootstrap core JS-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Core theme JS-->
+    <script src="js/scripts.js"></script>
+</body>
+</html>
