@@ -27,4 +27,4 @@ Se debe activar el entorno virtual con pipenv shell y luego con python manage.py
 
 LINK DEL VIDEO PARA VER FUNCIONAMIENTO
 
-https://drive.google.com/drive/folders/1lyf3LBugigN8kVOdyCwpgnRlZ-2MhSFE?usp=sharing
+[https://drive.google.com/drive/folders/1lyf3LBugigN8kVOdyCwpgnRlZ-2MhSFE?usp=sharing](https://drive.google.com/file/d/1KuJLIMlTUFVmgCaaO0j4IFpF8yzychKs/view?usp=sharing)
