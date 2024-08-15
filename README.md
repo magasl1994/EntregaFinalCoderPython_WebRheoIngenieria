@@ -18,7 +18,13 @@ En la sección "Nosotros", encontrarás una tarjeta con un enlace a nuestro perf
 Desarrollada con Django, nuestra web combina tecnología de vanguardia con una interfaz intuitiva, ofreciendo una experiencia en línea que refleja nuestro compromiso con la excelencia en ingeniería civil.
 
 PASOS A SEGUIR PARA ABRIR
+
 Fijarse que se esta dentro de la carpeta "Rheo_Ingenieria" que es donde está el archivo manage.py
+
 Instalar el archivo requirements.txt, en el presente desarrollo se utilizo python 3.11.9 y Django 4.2. 
+
 Se debe activar el entorno virtual con pipenv shell y luego con python manage.py runserver se debe hacer correr el servidor. En caso de que no funcione, verificar con pip list que se tenga instalado Django, si no se tiene hacer pip install django y luego volver a hacer correr el servidor.-
 
+LINK DEL VIDEO PARA VER FUNCIONAMIENTO
+
+https://drive.google.com/drive/folders/1lyf3LBugigN8kVOdyCwpgnRlZ-2MhSFE?usp=sharing
