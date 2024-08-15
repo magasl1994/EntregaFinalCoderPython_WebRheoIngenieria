@@ -1,0 +1,44 @@
+{% extends 'AppRheo/base.html' %}
+{% load static %}
+{% block main %}
+
+<!-- LOGGIN -->
+<div class="d-flex justify-content-center mb-3">
+
+    <!-- Contenedor para centrar el formulario -->
+    <div class="d-flex flex-column">
+
+        <!-- Mensaje personalizado en la vista de Login -->
+        <p class="fs-5 fw-bold">{{ msg_login }}</p>
+
+        <section class="page-section about-heading" style="margin-top: 100px;">
+            <div class="container">
+                <div class="about-heading-content">
+                    <div class="row">
+                        <div class="col-xl-9 col-lg-10 mx-auto">
+                            <div class="bg-faded rounded p-5">
+
+                                <h2 class="mb-4" style="text-align: center; font-weight: bold;">Descarga algunos trabajos realizados por nosotros</h2>
+                                <ul style="list-style-type: none; padding: 0;">
+                                    <li class="mb-2">
+                                        <a href="{% url 'download_pdf' 'archivo1.pdf' %}" class="btn btn-outline-secondary btn-block">Descargar Estudio Geotécnico</a>
+                                    </li>
+                                    <li class="mb-2">
+                                        <a href="{% url 'download_pdf' 'archivo2.pdf' %}" class="btn btn-outline-secondary btn-block">Descargar Preliminar Estudio Geotécnico</a>
+                                    </li>
+                                    <li class="mb-2">
+                                        <a href="{% url 'download_pdf' 'archivo3.pdf' %}" class="btn btn-outline-secondary btn-block">Descargar Cálculo de Estructura Acero</a>
+                                    </li>
+                                </ul>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </div>
+</div>
+
+{% endblock main %}

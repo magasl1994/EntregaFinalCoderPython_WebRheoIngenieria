@@ -1,0 +1,46 @@
+{% extends 'AppRheo/base.html' %}
+{% load static %}
+{% block main %}
+
+
+<!-- REGISTRO -->
+ {# Este div sólo está agregado para centrar el formulario en la página usando Bootstrap #}
+ <div class="d-flex justify-content-center">
+
+    {# Con este div colocamos el título y debajo el formulario usando Bootstrap #}
+    <div class="d-flex flex-column">
+
+        {# Mensaje personalizado en la vista de Login con estilos de Bootstrap #}
+        <p class="fs-5 fw-bold">{{ msg_register }}</p>
+
+
+        <section class="page-section about-heading" style="margin-top: 100px;">
+            <div class="container">
+                <div class="about-heading-content">
+                    <div class="row">
+                        <div class="col-xl-9 col-lg-10 mx-auto">
+                            <div class="bg-faded rounded p-5">
+                                <p>Estamos aquí para ayudarte a dar forma a tus ideas y llevar tus proyectos al siguiente nivel. Contáctanos hoy para descubrir cómo Rheo puede contribuir al éxito de tu próximo proyecto.</p>
+                                
+                                
+                                <form action="" method="POST">
+                                    {% csrf_token %}
+                                    <table>
+                                    {{ form.as_table }}
+                                    </table>
+                                    <button type="submit" class="btn btn-primary btn-xl" style="background-color: #4e342e; border-color: #4e342e; color: white;">
+                                        Registrarse
+                                    </button>
+                        
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+</div>
+
+
+{% endblock main %}

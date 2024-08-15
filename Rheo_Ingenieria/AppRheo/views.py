@@ -1,9 +1,15 @@
-from django.http import HttpResponse
+from django.http import HttpResponse, FileResponse, Http404
 from django.shortcuts import render
 from AppRheo.forms import FormularioContacto, FormularioExperiencia, FormularioBuscaServicio
 from django.core.mail import send_mail
 from django import forms
 from AppRheo.models import Experiencia, servicios
+from django.contrib.auth.decorators import login_required
+import os
+from django.conf import settings
+
+
+
 
 
 def inicio(request):
@@ -12,6 +18,10 @@ def inicio(request):
 def nosotros(request):
        
     return render(request, 'AppRheo/nosotros.html')
+
+def comunidadrheo(request):
+       
+    return render(request, 'AppRheo/comunidadrheo.html')
 
 def servicios2(request):
     if request.method=="POST":
@@ -52,7 +62,7 @@ def contacto(request):
         
     return render(request, 'AppRheo/contacto.html', {"form":miFormulario})
 
-
+@login_required
 def experiencia(request):
     if request.method == 'POST':
         miFormulario = FormularioExperiencia(request.POST)
@@ -68,4 +78,13 @@ def experiencia(request):
         miFormulario = FormularioExperiencia()
     return render(request, 'AppRheo/experiencia.html', {'form': miFormulario})
     
+@login_required
+def download_pdf(request, filename):
+    # Ruta completa del archivo en la carpeta media/pdfs
+    file_path = os.path.join(settings.MEDIA_ROOT, 'pdfs', filename)
     
+    # Verifica si el archivo existe en la ruta especificada
+    if os.path.exists(file_path):
+        return FileResponse(open(file_path, 'rb'), content_type='AppRheo/pdf')
+    else:
+        raise Http404("Archivo no encontrado")

@@ -7,4 +7,5 @@ urlpatterns = [
     path('servicios/', views.servicios2, name="Servicios"),
     path('contacto/', views.contacto, name="Contacto"),
     path('experiencia/', views.experiencia, name="Experiencia"),
+    path('download/<str:filename>/', views.download_pdf, name='download_pdf'),
     ]

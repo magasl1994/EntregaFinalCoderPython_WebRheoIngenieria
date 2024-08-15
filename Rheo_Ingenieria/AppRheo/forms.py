@@ -1,4 +1,7 @@
 from django import forms
+from django.urls import reverse_lazy
+from django.contrib.auth.models import User
+from django.contrib.messages.views import SuccessMessageMixin
 
 
 #Formulario de contacto para envio de e-mail
@@ -32,4 +35,3 @@ class FormularioBuscaServicio(forms.Form):
     nombre_servicio = forms.CharField(
         widget=forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'Servicio que quiere consultar si brindamos'})
     )
-    

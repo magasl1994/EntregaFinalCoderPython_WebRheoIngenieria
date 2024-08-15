@@ -1,43 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        {% load static %}
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-        <meta name="description" content="" />
-        <meta name="author" content="" />
-        <title>Business Casual - Start Bootstrap Theme</title>
-        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
-        <!-- Google fonts-->
-        <link href="https://fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet" />
-        <link href="https://fonts.googleapis.com/css?family=Lora:400,400i,700,700i" rel="stylesheet" />
-        <!-- Core theme CSS (includes Bootstrap)-->
-        <link href="{% static 'AppRheo/css/styles.css' %}" rel="stylesheet" />
-    </head>
-    <body>
-        <header>
-            <h1 class="site-heading text-center text-faded d-none d-lg-block">
-                <span class="site-heading-upper text-primary mb-3">INGENIERÍA QUE FLUYE</span>
-                <span class="site-heading-lower">RHÉO</span>
-            </h1>
-        </header>
-        <!-- Navigation-->
-        <nav class="navbar navbar-expand-lg navbar-dark py-lg-4" id="mainNav">
-            <div class="container">
-                <a class="navbar-brand text-uppercase fw-bold d-lg-none" href="index.html">Start Bootstrap</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav mx-auto">
-                        <li class="nav-item px-lg-4"><a class="nav-link text-uppercase" href="{% url 'Inicio' %}">Inicio</a></li>
-                        <li class="nav-item px-lg-4"><a class="nav-link text-uppercase" href="{% url 'Nosotros' %}">Nosotros</a></li>
-                        <li class="nav-item px-lg-4"><a class="nav-link text-uppercase" href="{% url 'Servicios' %}">Servicios</a></li>
-                        <li class="nav-item px-lg-4"><a class="nav-link text-uppercase" href="{% url 'Contacto' %}">Contacto</a></li>
-                        <li class="nav-item px-lg-4"><a class="nav-link text-uppercase" href="{% url 'Experiencia' %}">Experiencia</a></li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-
+{% extends 'AppRheo/base.html' %}
+{% load static %}
+{% block main %}
 
         <section class="page-section about-heading">
             <div class="container">
@@ -64,39 +27,28 @@
             </div>
         </section>
 
-<!-- Botón de desplazamiento hacia arriba -->
-<button id="scrollToTopBtn" class="scroll-to-top" onclick="scrollToTop()" style="position: fixed; bottom: 20px; right: 20px; background-color: #4e342e; color: white; border: none; border-radius: 50%; padding: 10px 15px; font-size: 24px; cursor: pointer; z-index: 1000; box-shadow: 0 2px 4px rgba(0,0,0,0.2);">▲</button>
-
-<!-- // Mostrar/ocultar el botón de desplazamiento hacia arriba-->
-<script>
-    window.onscroll = function() {
-        const scrollToTopBtn = document.getElementById("scrollToTopBtn");
-        if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
-            scrollToTopBtn.style.display = "block";
-        } else {
-            scrollToTopBtn.style.display = "none";
-        }
-    };
-
-// Desplazar hacia arriba cuando se hace clic en el botón
-function scrollToTop() {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-}
-</script>
-
-
-
-
-
+        <div class="about-heading-content">
+            <div class="row">
+                <div class="col-xl-9 col-lg-10 mx-auto">
+                    <div class="bg-faded rounded p-5">
+                        <h2 class="section-heading mb-4 text-center">
+                            <span class="section-heading-lower">MIEMBROS DEL EQUIPO</span>
+                        </h2>
+                        <div class="d-flex justify-content-center">
+                            <div class="card" style="width: 18rem;">
+                                <img src="{% static 'AppRheo/assets/img/miembro1.jpg' %}" class="card-img-top" alt="Foto de miembro del equipo">
+                                <div class="card-body">
+                                    <h5 class="card-title">Ing. Civil Magali S. Londero</h5>
+                                    <p class="card-text">CEO RHÉO Ingenieria</p>
+                                    <a href="https://www.linkedin.com/in/magalilondero/" class="btn btn-primary" target="_blank">LinkedIn</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
 
 
-
-        <footer class="footer text-faded text-center py-5">
-            <div class="container"><p class="m-0 small">Copyright &copy; Rhéo Ingeniería Civil 2024</p></div>
-        </footer>
-        <!-- Bootstrap core JS-->
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
-        <!-- Core theme JS-->
-        <script src="js/scripts.js"></script>
-    </body>
-</html>
+{% endblock main %}

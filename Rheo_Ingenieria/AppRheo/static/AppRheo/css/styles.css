@@ -11089,3 +11089,51 @@ p {
   text-align: center;
 }
 
+
+/* Botón de desplazamiento hacia arriba */
+.scroll-to-top {
+  position: fixed;
+  bottom: 20px; /* Margen desde el fondo de la pantalla */
+  left: 20px; /* Margen desde el lado izquierdo de la pantalla */
+  background-color: #A0522D; /* Marrón más claro para el hover */
+  border-color: #A0522D;     /* Bordes marrones más claros */
+  color: white;
+  border: none;
+  border-radius: 50%; /* Hace el botón circular */
+  padding: 10px; /* Ajusta el tamaño del botón */
+  font-size: 30px; /* Tamaño del icono */
+  width: 50px; /* Ancho fijo para mantener la forma circular */
+  height: 50px; /* Altura fija para mantener la forma circular */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 1000;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+  transition: background-color 0.3s ease;
+}
+
+.scroll-to-top:hover {
+  background-color: #3e2723; /* Color al pasar el mouse */
+}
+
+
+
+.btn-custom {
+  background-color: #FFA500; /* Naranja */
+  color: white; /* Color del texto */
+  border: none; /* Sin borde */
+}
+
+.btn-custom:hover {
+  background-color: #ff8c00; /* Naranja más oscuro al pasar el ratón */
+}
+
+.dropdown-menu-dark .dropdown-item {
+  color: #fff; /* Color del texto en el menú desplegable */
+  font-family: inherit; /* Usa la misma fuente que el botón */
+}
+
+.dropdown-menu-dark .dropdown-item:hover {
+  background-color: #333; /* Color de fondo al pasar el ratón */
+}

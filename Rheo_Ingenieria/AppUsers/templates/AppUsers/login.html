@@ -1,0 +1,47 @@
+{% extends 'AppRheo/base.html' %}
+{% load static %}
+{% block main %}
+
+<!-- LOGGIN -->
+{# Este div sólo está agregado para centrar el formulario en la página usando Bootstrap #}
+<div class="d-flex justify-content-center">
+    {# Con este div colocamos el título y debajo el formulario usando Bootstrap #}
+    <div class="d-flex flex-column">
+        {# Mensaje personalizado en la vista de Login con estilos de Bootstrap #}
+        <p class="fs-5 fw-bold">{{ msg_login }}</p>
+        <section class="page-section about-heading" style="margin-top: 100px;">
+            <div class="container">
+                <div class="about-heading-content">
+                    <div class="row">
+                        <div class="col-xl-9 col-lg-10 mx-auto">
+                            <div class="bg-faded rounded p-5">
+                                <p>Crea un usuario y contraseña y accede a proyectos realizados por nosotros, para que puedas conocer el tipo de documentación con el que contarás para tu obra. 
+                                    Además, podrás encontrar una sección exclusivamente para dejarnos tu comentario acerca de como fue trabajar con nosotros.
+                                </p>
+                                
+                                <form action="" method="POST">
+                                    {% csrf_token %}
+                                    <table>
+                                    {{ form.as_table }}
+                                    </table>
+                                    <button type="submit" class="btn btn-primary btn-xl" style="background-color: #4e342e; border-color: #4e342e; color: white;">
+                                        Iniciar sesión
+                                    </button>
+                                    <br><strong style="font-size: 1.25rem;">Si no estas registrado, unite a nuestra comunidad.</strong>
+                                    <br><a href="{% url 'Register' %}" class="btn btn-secondary btn-xl" style="background-color: #FFA500; border-color: #FFA500; color: white; text-decoration: none;">
+                                        Deseo registrarme
+                                    </a>
+                        
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>    
+
+    </div>
+</div>
+
+
+{% endblock main %}

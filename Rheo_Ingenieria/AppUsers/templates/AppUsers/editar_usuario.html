@@ -1,0 +1,44 @@
+{% extends 'AppRheo/base.html' %}
+{% load static %}
+{% block main %}
+
+{# Este div sólo está agregado para centrar el formulario en la página usando Bootstrap #}
+<div class="d-flex justify-content-center">
+
+    {# Con este div colocamos el título y debajo el formulario usando Bootstrap #}
+    <div class="d-flex flex-column">
+
+        {# Mensaje personalizado en la vista de Login con estilos de Bootstrap #}
+        <p class="fs-5 fw-bold">{{ msg_login }}</p>
+
+        <section class="page-section about-heading" style="margin-top: 100px;">
+            <div class="container">
+                <div class="about-heading-content">
+                    <div class="row">
+                        <div class="mx-auto" style="width: 100%; max-width: 1400px;"> <!-- Aumentando el ancho máximo -->
+                            <div class="bg-faded rounded p-5" style="background-color: #f8f9fa; border-radius: 15px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+                                <p class="mb-4" style="text-align: center; font-weight: bold;">Editar usuario</p>
+                                
+                                <form action="" method="POST" enctype="multipart/form-data">
+                                    {% csrf_token %}
+                                
+                                    <table style="width: 100%;">
+                                        {{ mi_form.as_table }}
+                                        <tr>
+                                            <td colspan="2">
+                                                <input type="submit" value="Actualizar" class="btn btn-primary w-100">
+                                            </td>
+                                        </tr>
+                                    </table>                              
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+</div>
+
+
+{% endblock main %}
